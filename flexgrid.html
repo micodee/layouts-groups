@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style type="text/css" media="all">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0 auto;
+      }
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .grid {
+        display: grid;
+        place-content: center;
+      }
+      .layout1 {
+        justify-content: start;
+        flex-direction: column;
+        padding: 5px;
+        gap: 5px;
+        
+      }
+      .navbar,
+      .header,
+      .links,
+      .sidebar,
+      .footer {
+        width: 100%;
+        background: #666;
+      }
+      .layout1 .navbar {
+        padding: 1rem 0;
+      }
+      .layout1 .header {
+        padding: 3rem 0;
+      }
+      .layout1 .links {
+        gap: 5px;
+        justify-content: space-between;
+      }
+      .layout1 .sidebar {
+        gap: 5px;
+        grid-template-columns: repeat(1, 1.5fr 1fr);
+      }
+      .layout1 .footer {
+        padding: 3rem 0;
+      }
+      .link {
+        background: #aaa;
+        height: 30px;
+        width: 23%;
+      }
+      .sidebarL,
+      .sidebarR {
+        background: #aaa;
+      }
+      .sidebarL {
+        padding: 10px;
+        text-align: justify;
+      }
+      .sidebarR {
+        gap: 5px;
+        flex-direction: column;
+      }
+      .right {
+        height: 100%;
+        width: 100%;
+        background: #444;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="layout1 flex">
+      <div class="navbar flex">NAVBAR</div>
+      <div class="header flex">HEADER</div>
+      <div class="links flex">
+        <div class="link flex">link 1</div>
+        <div class="link flex">link 2</div>
+        <div class="link flex">link 3</div>
+        <div class="link flex">link 4</div>
+      </div>
+      <div class="sidebar grid">
+        <div class="sidebarL flex">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis aliquid eveniet officiis, enim soluta dicta! Reprehenderit quas quod dolor ipsam sequi, dolorum, amet pariatur doloribus, tempora nihil asperiores est neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique asperiores dolorum cupiditate hic, culpa voluptates molestias veniam ea non, sequi facilis provident, maxime ratione soluta tenetur praesentium at aspernatur harum.</div>
+        <div class="sidebarR flex">
+          <div class="right flex">SIDE RIGHT</div>
+          <div class="right flex">SIDE RIGHT</div>
+        </div>
+      </div>
+      <div class="footer flex">FOOTER</div>
+    </div>
+  </body>
+</html>
